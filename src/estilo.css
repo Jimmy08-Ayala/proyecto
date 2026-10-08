@@ -1,0 +1,175 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background: #101318;
+  font-size: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: clip;
+  background: #101318;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 4px solid #fff;
+  outline-offset: 4px;
+}
+
+#app {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.juego {
+  display: flex;
+  width: min(1120px, 100%);
+  min-width: 0;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.encabezado h1 {
+  min-width: 0;
+  margin: 0;
+  font-size: clamp(28px, 5vw, 40px);
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+}
+
+.record {
+  display: grid;
+  gap: 4px;
+  min-width: min(170px, 100%);
+  margin: 0;
+  padding: 12px 16px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  background: #20252d;
+  font-size: 16px;
+  text-align: center;
+}
+
+.record strong {
+  font-size: 20px;
+}
+
+.area-juego {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.panel-juego {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  min-height: min(72vh, 700px);
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: clamp(24px, 6vw, 72px);
+  border: 4px solid #fff;
+  border-radius: 24px;
+  cursor: pointer;
+  text-align: center;
+  touch-action: manipulation;
+}
+
+.panel-juego:hover {
+  filter: brightness(1.08);
+}
+
+.panel-juego.rojo {
+  background: #b91c1c;
+  color: #fff;
+}
+
+.panel-juego.verde {
+  background: #15803d;
+  color: #fff;
+}
+
+.panel-juego.azul {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.panel-juego.amarillo {
+  background: #facc15;
+  color: #111827;
+}
+
+.mensaje {
+  max-width: 24ch;
+  font-size: clamp(28px, 6vw, 56px);
+  font-weight: 800;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.instruccion {
+  max-width: 48ch;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 520px) {
+  .juego {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .encabezado {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .record {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .panel-juego {
+    min-height: 64vh;
+    border-radius: 18px;
+  }
+}
